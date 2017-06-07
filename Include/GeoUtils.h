@@ -37,14 +37,13 @@ namespace geo {
         float lon = 0;
     };
     
+    
+    
+    //!Translates a Latitude and Longitude to a Cartesian point in a equiretangular map
    inline ci::vec2 coordinateToCartesian(const Coordinate coordinate , ci::vec2 mapSize = pixelSize){
        
         float width = mapSize.x;
         float height = mapSize.y;
-        
-//        float lat = point.x;
-//        float lon = point.y;
-       
        
        auto y = (((coordinate.lat * -1) + 90) * (height/ 180));
        auto x = ((coordinate.lon + 180) * (width  / 360));
@@ -52,6 +51,8 @@ namespace geo {
         return ci::vec2(x,y);
     }
     
+    
+    //!Translates a cartesian point to Latitude and Longitude
     inline Coordinate cartesianToCoordinate(const ci::vec2& point, ci::vec2 size = pixelSize){
         
         
@@ -66,7 +67,7 @@ namespace geo {
         return coord;
     }
     
-    
+    //! Returns the distance between two coordinates
    inline double distanceCoordinate(const Coordinate& coordA, const Coordinate coordB){
         
         const double R = 6371e3; // metres
@@ -86,7 +87,7 @@ namespace geo {
         return d * 0.001; // in km
     }
     
-    
+    //! Returns a coordinate point in the terminator line
     inline Coordinate getTerminatorCoords(float lat, float lon, float gamma){
         
         Coordinate terminator;
