@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cinder>
+<block
+	name="Geographic Utils"
+	id="hp.GeoUtils"
+	author="Henrique Périgo"
+	summary="Helper functions for geographic math"
+	git="https://github.com/simongeilfus/SimplexNoise.git"
+	>
+	<includePath>include</includePath>
+	<header>include/GeoUtils.h</header>
+</block>
+</cinder>
