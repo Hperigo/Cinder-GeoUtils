@@ -3,7 +3,7 @@ Geographic Utilities
 
 
 
-A couple of functions to help with geographic coordinates. To start you just need to set the geo::pixelSize viariable, it's the size of your equiretangular map
+A couple of functions to help with geographic coordinates. To start you just need to set the geo::pixelSize variable, it's the size of your equiretangular map
 
 
 ![](example.png)
